@@ -14,7 +14,7 @@ export default function Hero() {
         className="z-10 text-center"
       >
         <h1 className="text-4xl md:text-6xl font-bold">WELCOME</h1>
-        <p className="mt-4 text-lg md:text-xl text-gray-300">FEEL FREE TO EXPLORE</p>
+        <p className="mt-4 text-lg md:text-xl text-gray-300">--</p>
       </motion.div>
         <motion.div
         initial={{ opacity: 0}}

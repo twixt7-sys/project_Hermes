@@ -1,4 +1,19 @@
-# Main Sections:
+TO-DO:
+
+- Tech stack description:
+    - Use React for the frontend to create a dynamic user interface.
+    - Use Node.js with Express for the backend to handle API requests.
+
+- Architecture:
+    - Implement a modular architecture for better maintainability.
+    - Use design patterns where applicable (e.g., MVC, Singleton).
+
+- Code Quality:
+    - Ensure code is well-documented with comments.
+    - Implement consistent coding standards and style guides.
+    - Use linters and formatters to maintain code quality.
+
+- Sections:
     - Profile:
         - Profile picture
         - Metadata
@@ -22,3 +37,4 @@
         - Contact form
         - Social media links
         - Email address
+

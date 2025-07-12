@@ -1,14 +1,14 @@
 'use client';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useRef, useEffect, useMemo } from 'react';
+import { useRef, useEffect, useMemo, RefObject } from 'react';
 import * as THREE from 'three';
 
 type CircleProps = {
   radius: number;
   position: THREE.Vector3;
   mass: number;
-  allCircles: React.MutableRefObject<THREE.Mesh[]>;
-  mouse: React.MutableRefObject<THREE.Vector2>;
+  allCircles: RefObject<THREE.Mesh[]>;
+  mouse: RefObject<THREE.Vector2>;
 };
 
 function Circle({ radius, position, mass, allCircles, mouse }: CircleProps) {
@@ -98,11 +98,13 @@ function Circle({ radius, position, mass, allCircles, mouse }: CircleProps) {
   });
 
   useEffect(() => {
-    ref.current.userData.vel = vel.current;
-    allCircles.current.push(ref.current);
+    const mesh = ref.current;
+    mesh.userData.vel = vel.current;
+    allCircles.current.push(mesh);
     return () => {
-      allCircles.current = allCircles.current.filter((m) => m !== ref.current);
+      allCircles.current = allCircles.current.filter((m) => m !== mesh);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -136,12 +138,14 @@ function Circles() {
 
   useEffect(() => {
     const handle = (e: MouseEvent) => {
-      mouse.current.x = ((e.clientX / size.width) * 2 - 1) * (viewport.width / 2);
-      mouse.current.y = -((e.clientY / size.height) * 2 - 1) * (viewport.height / 2);
+      const { width, height } = size;
+      const { width: vWidth, height: vHeight } = viewport;
+      mouse.current.x = ((e.clientX / width) * 2 - 1) * (vWidth / 2);
+      mouse.current.y = -((e.clientY / height) * 2 - 1) * (vHeight / 2);
     };
     window.addEventListener('mousemove', handle);
     return () => window.removeEventListener('mousemove', handle);
-  }, [size, viewport]);
+  }, []);
 
   const count = 5;
   const spacing = 5;

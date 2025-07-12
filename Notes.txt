@@ -1,0 +1,40 @@
+How to start Nextjs project:
+
+Commands:
+- cd my-portfolio
+- npm run dev
+
+// 1. Install Node.js and npm
+// 2. Create a new Next.js project:
+//    npx create-next-app@latest my-portfolio
+// 3. Navigate to the project directory:
+//    cd my-portfolio
+// 4. Start the development server:
+//    npm run dev
+// 5. Open your browser and go to http://localhost:3000
+// 6. Begin developing your portfolio by modifying the pages and components in the 'pages'
+//    and 'components' directories.
+// 7. Use the Next.js documentation for guidance on routing, data fetching, and other
+//    features: https://nextjs.org/docs
+// 8. To build the project for production, run:
+//    npm run build
+// 9. To start the production server, run:
+//    npm start
+// 10. Deploy your Next.js application using Vercel, Netlify, or any other hosting service
+//     that supports Next.js applications.
+// 11. Keep your project updated with the latest Next.js features and best practices by
+//     following the official Next.js blog and documentation.
+// 12. Consider using TypeScript for type safety and better developer experience:
+//     - To add TypeScript, run:
+//       npm install --save-dev typescript @types/react @types/node
+//     - Rename your files from .js to .tsx for components and .ts for other TypeScript files.
+//     - Next.js will automatically detect TypeScript and create a tsconfig.json file
+//       for you.
+// 13. Explore Next.js features like static site generation (SSG), server-side rendering
+//     (SSR), and API routes to enhance your portfolio's functionality.
+// 14. Use CSS modules or styled-components for styling your components.
+// 15. Regularly commit your changes to a version control system like Git and push to
+//     a repository on GitHub or GitLab for collaboration and backup.
+// 16. Consider adding analytics to track visitor interactions and performance.
+// 17. Keep your dependencies up to date by regularly checking for updates and security
+//     patches.
