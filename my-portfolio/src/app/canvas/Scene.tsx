@@ -136,6 +136,7 @@ function Circles() {
   const allCircles = useRef<THREE.Mesh[]>([]);
   const { size, viewport } = useThree();
 
+  /* eslint-disable-next-line react-hooks/exhaustive-deps */
   useEffect(() => {
     const handle = (e: MouseEvent) => {
       const { width, height } = size;

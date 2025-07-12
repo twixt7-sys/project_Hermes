@@ -16,13 +16,14 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl font-bold">WELCOME</h1>
         <p className="mt-4 text-lg md:text-xl text-gray-300">--</p>
       </motion.div>
-        <motion.div
-        initial={{ opacity: 0}}
-        animate={{ opacity: 1}}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        className="pointer-events-none"
       >
         <section className="absolute inset-0 z-0">
-        <Scene />
+          <Scene />
         </section>
       </motion.div>
     </section>
